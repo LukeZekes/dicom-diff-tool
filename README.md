@@ -14,8 +14,8 @@ A web-based application for comparing two DICOM files tag-by-tag. This tool prov
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/dicom-diff-antigravity.git
-cd dicom-diff-antigravity
+git clone https://github.com/LukeZekes/dicom-diff-tool.git
+cd dicom-diff-tool
 ```
 
 2. Create and activate a virtual environment:
@@ -51,7 +51,7 @@ http://localhost:5001
 ## Project Structure
 
 ```
-dicom-diff-antigravity/
+dicom-diff-tool/
 ├── app.py              # Flask backend with DICOM comparison logic
 ├── requirements.txt    # Python dependencies
 ├── static/
@@ -74,3 +74,11 @@ The application uses `pydicom` to parse DICOM files and recursively compares all
 - **Green**: Tags match between both files
 - **Yellow**: Tags have different values
 - **Red**: Tag exists in only one file
+
+## License
+
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.

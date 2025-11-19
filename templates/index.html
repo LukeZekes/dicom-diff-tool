@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICOM Diff</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>DICOM Diff Tool</h1>
+            <p>Compare two DICOM files tag-by-tag</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="file-input-group">
+                <label for="file1">File A (Base)</label>
+                <input type="file" id="file1" accept=".dcm">
+            </div>
+            <div class="file-input-group">
+                <label for="file2">File B (Compare)</label>
+                <input type="file" id="file2" accept=".dcm">
+            </div>
+            <button id="compare-btn">Compare Files</button>
+        </div>
+
+        <div class="search-section">
+            <div class="search-input-wrapper">
+                <input type="text" id="search-input" placeholder="Add search term or regex...">
+                <button id="add-search-btn">Add Filter</button>
+            </div>
+            <div class="toggle-group">
+                <label class="switch">
+                    <input type="checkbox" id="regex-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Use Regex</span>
+            </div>
+        </div>
+
+        <div id="search-terms-container" class="search-terms-container">
+            <!-- Search term chips will be added here -->
+        </div>
+
+        <div id="results-container" class="results-container">
+            <div class="placeholder-text">Upload two files to see the comparison.</div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
